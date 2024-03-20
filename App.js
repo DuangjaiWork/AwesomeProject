@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Alert, Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Button, FlatList, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { PaperProvider } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 import Welcome from './screens/Welcome';
@@ -26,10 +27,22 @@ import Resort from './screens/week3/Resort';
 import TestPaper from './screens/week4/TestPaper';
 import Health from './screens/week5/Health';
 import ChartKitScreen from './screens/week5/ChartKitScreen';
+import Home from './screens/week6/Home';
+import FlatListExample from './screens/week6/FlatListExample';
+import HomeStack from './navigations/HomeStack';
+import BottomTab from './navigations/BottomTab';
+import RootStack from './navigations/RootStack';
 
 export default function App() {
   return (
-    <ChartKitScreen />
+      <NavigationContainer>
+          {/* <HomeStack /> */}
+          {/* <BottomTab /> */}
+          <RootStack />
+      </NavigationContainer>
+    //<FlatListExample />
+    //<Home />
+    //<ChartKitScreen />
     //<Health />
     // <PaperProvider>
     //   <TestPaper />
